@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Skip Chapter Settings</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body style="min-width: 350px; text-align: center;">
+<br>
+<form id="options-form">
+    <label>
+        <input type="checkbox" name="use-regex" value="yes" id="use-regex">
+        Use regex
+    </label>
+    <br>
+    <br>
+    <br>
+    <label>
+        Skip words (one per line. If a YouTube video's chapter has a match, that chapter will be skipped automatically)
+    </label>
+    <br>
+    <br>
+    <textarea name="skip_words" style="width: 350px; height: 250px;" id="skip_words"></textarea>
+    <br>
+    <br>
+    <br>
+    <button id="save" type="submit">Save</button>
+    <br>
+    <br>
+    <div id="status"></div>
+    <br>
+    <br>
+</form>
+<script src="options.js"></script>
+</body>
+</html>

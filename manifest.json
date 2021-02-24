@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Skip Chapter",
+  "description": "Automatically skip chapters of YouTube videos you don't want to watch.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "youtube_skip_chapter.png",
+    "default_title": "Click here to edit skip words",
+    "default_popup": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/watch*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "*://*.youtube.com/watch*",
+    "storage"
+  ]
+}
